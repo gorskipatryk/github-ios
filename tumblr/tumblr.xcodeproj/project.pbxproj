@@ -20,6 +20,11 @@
 		D00C4CA421BAFECA00794C5B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CA321BAFECA00794C5B /* Color.swift */; };
 		D00C4CA621BAFFF500794C5B /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CA521BAFFF500794C5B /* NavigationController.swift */; };
 		D00C4CAA21BB0FC200794C5B /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CA921BB0FC200794C5B /* FeedCoordinator.swift */; };
+		D00C4CAD21BD8A1000794C5B /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CAC21BD8A1000794C5B /* FeedViewModel.swift */; };
+		D00C4CAF21BD8A1900794C5B /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CAE21BD8A1900794C5B /* FeedViewController.swift */; };
+		D00C4CB121BD8A2000794C5B /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CB021BD8A2000794C5B /* FeedView.swift */; };
+		D00C4CB321BD8B2200794C5B /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CB221BD8B2200794C5B /* ViewControllerFactory.swift */; };
+		D00C4CB621BD8D9100794C5B /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CB521BD8D9100794C5B /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,11 @@
 		D00C4CA321BAFECA00794C5B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		D00C4CA521BAFFF500794C5B /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		D00C4CA921BB0FC200794C5B /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
+		D00C4CAC21BD8A1000794C5B /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		D00C4CAE21BD8A1900794C5B /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		D00C4CB021BD8A2000794C5B /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		D00C4CB221BD8B2200794C5B /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		D00C4CB521BD8D9100794C5B /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +135,7 @@
 		D00C4C8C21BAEC6F00794C5B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				D00C4CB421BD8D8200794C5B /* Extensions */,
 				D00C4CA221BAFE8200794C5B /* Constants */,
 				D00C4C9A21BAFD7400794C5B /* Factories */,
 				D00C4C8D21BAEC7400794C5B /* Base Classes */,
@@ -169,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				D00C4C9B21BAFD8500794C5B /* NavigationControllerFactory.swift */,
+				D00C4CB221BD8B2200794C5B /* ViewControllerFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -217,8 +229,19 @@
 		D00C4CAB21BB0FC700794C5B /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				D00C4CAC21BD8A1000794C5B /* FeedViewModel.swift */,
+				D00C4CAE21BD8A1900794C5B /* FeedViewController.swift */,
+				D00C4CB021BD8A2000794C5B /* FeedView.swift */,
 			);
 			path = Feed;
+			sourceTree = "<group>";
+		};
+		D00C4CB421BD8D8200794C5B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D00C4CB521BD8D9100794C5B /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,12 +389,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D00C4CAD21BD8A1000794C5B /* FeedViewModel.swift in Sources */,
 				D00C4C9621BAF67D00794C5B /* AppCoordinator.swift in Sources */,
 				D00C4CA621BAFFF500794C5B /* NavigationController.swift in Sources */,
 				D00C4C9C21BAFD8500794C5B /* NavigationControllerFactory.swift in Sources */,
+				D00C4CB121BD8A2000794C5B /* FeedView.swift in Sources */,
+				D00C4CB321BD8B2200794C5B /* ViewControllerFactory.swift in Sources */,
 				D00C4CA421BAFECA00794C5B /* Color.swift in Sources */,
 				D00C4C9421BAF54D00794C5B /* Services.swift in Sources */,
 				D00C4C7921B98E9800794C5B /* AppDelegate.swift in Sources */,
+				D00C4CAF21BD8A1900794C5B /* FeedViewController.swift in Sources */,
+				D00C4CB621BD8D9100794C5B /* UIViewController+Extensions.swift in Sources */,
 				D00C4CA121BAFE0100794C5B /* BaseNavigationBar.swift in Sources */,
 				D00C4CAA21BB0FC200794C5B /* FeedCoordinator.swift in Sources */,
 				D00C4C8F21BAEC8500794C5B /* Coordinator.swift in Sources */,

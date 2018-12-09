@@ -20,6 +20,8 @@ final class FeedCooridnator: Coordinator {
     }
     
     func showFeedScreen() {
-        print("feed"
+        let viewController = ViewControllerFactory.makeFeedViewController()
+        childNavigationController.setViewControllers([viewController], animated: false)
+        parentNavigationController.present(childNavigationController, animated: true, completion: nil)
     }
 }
