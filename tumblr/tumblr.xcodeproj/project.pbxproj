@@ -7,21 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FAE68B848CA4D6BD37B88D8 /* Pods_tumblr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52EC017151376D5B14209105 /* Pods_tumblr.framework */; };
 		D00C4C7921B98E9800794C5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4C7821B98E9800794C5B /* AppDelegate.swift */; };
-		D00C4C7B21B98E9800794C5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4C7A21B98E9800794C5B /* ViewController.swift */; };
-		D00C4C7E21B98E9800794C5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00C4C7C21B98E9800794C5B /* Main.storyboard */; };
 		D00C4C8021B98E9B00794C5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D00C4C7F21B98E9B00794C5B /* Assets.xcassets */; };
 		D00C4C8321B98E9B00794C5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D00C4C8121B98E9B00794C5B /* LaunchScreen.storyboard */; };
+		D00C4C8F21BAEC8500794C5B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4C8E21BAEC8500794C5B /* Coordinator.swift */; };
+		D00C4C9421BAF54D00794C5B /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4C9321BAF54D00794C5B /* Services.swift */; };
+		D00C4C9621BAF67D00794C5B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4C9521BAF67D00794C5B /* AppCoordinator.swift */; };
+		D00C4C9921BAFA4000794C5B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = D00C4C9821BAFA4000794C5B /* .swiftlint.yml */; };
+		D00C4C9C21BAFD8500794C5B /* NavigationControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4C9B21BAFD8500794C5B /* NavigationControllerFactory.swift */; };
+		D00C4CA121BAFE0100794C5B /* BaseNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CA021BAFE0100794C5B /* BaseNavigationBar.swift */; };
+		D00C4CA421BAFECA00794C5B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CA321BAFECA00794C5B /* Color.swift */; };
+		D00C4CA621BAFFF500794C5B /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CA521BAFFF500794C5B /* NavigationController.swift */; };
+		D00C4CAA21BB0FC200794C5B /* FeedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CA921BB0FC200794C5B /* FeedCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52EC017151376D5B14209105 /* Pods_tumblr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tumblr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		907E4731BC0F5B0D7A4C6E6E /* Pods-tumblr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tumblr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tumblr/Pods-tumblr.debug.xcconfig"; sourceTree = "<group>"; };
+		9AC6BFD96DAAE162D65A7A25 /* Pods-tumblr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tumblr.release.xcconfig"; path = "Pods/Target Support Files/Pods-tumblr/Pods-tumblr.release.xcconfig"; sourceTree = "<group>"; };
 		D00C4C7521B98E9800794C5B /* tumblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tumblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00C4C7821B98E9800794C5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D00C4C7A21B98E9800794C5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D00C4C7D21B98E9800794C5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D00C4C7F21B98E9B00794C5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D00C4C8221B98E9B00794C5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D00C4C8421B98E9B00794C5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D00C4C8E21BAEC8500794C5B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		D00C4C9321BAF54D00794C5B /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		D00C4C9521BAF67D00794C5B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D00C4C9821BAFA4000794C5B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		D00C4C9B21BAFD8500794C5B /* NavigationControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerFactory.swift; sourceTree = "<group>"; };
+		D00C4CA021BAFE0100794C5B /* BaseNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationBar.swift; sourceTree = "<group>"; };
+		D00C4CA321BAFECA00794C5B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		D00C4CA521BAFFF500794C5B /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		D00C4CA921BB0FC200794C5B /* FeedCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +47,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FAE68B848CA4D6BD37B88D8 /* Pods_tumblr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EB2C9F7284AF55BA75EA88F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				907E4731BC0F5B0D7A4C6E6E /* Pods-tumblr.debug.xcconfig */,
+				9AC6BFD96DAAE162D65A7A25 /* Pods-tumblr.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		30DE3BD95676D47EB8110F3E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52EC017151376D5B14209105 /* Pods_tumblr.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D00C4C6C21B98E9700794C5B = {
 			isa = PBXGroup;
 			children = (
+				D00C4C9821BAFA4000794C5B /* .swiftlint.yml */,
 				D00C4C7721B98E9800794C5B /* tumblr */,
 				D00C4C7621B98E9800794C5B /* Products */,
+				1EB2C9F7284AF55BA75EA88F /* Pods */,
+				30DE3BD95676D47EB8110F3E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +93,132 @@
 		D00C4C7721B98E9800794C5B /* tumblr */ = {
 			isa = PBXGroup;
 			children = (
-				D00C4C7821B98E9800794C5B /* AppDelegate.swift */,
-				D00C4C7A21B98E9800794C5B /* ViewController.swift */,
-				D00C4C7C21B98E9800794C5B /* Main.storyboard */,
-				D00C4C7F21B98E9B00794C5B /* Assets.xcassets */,
-				D00C4C8121B98E9B00794C5B /* LaunchScreen.storyboard */,
-				D00C4C8421B98E9B00794C5B /* Info.plist */,
+				D00C4C8A21BAEB9B00794C5B /* Application */,
+				D00C4C9021BAF53900794C5B /* Data */,
+				D00C4C8B21BAEBD300794C5B /* Resources */,
+				D00C4CA721BB0F9500794C5B /* User Stories */,
+				D00C4C8C21BAEC6F00794C5B /* Utilities */,
+				D00C4C9D21BAFDBC00794C5B /* Views */,
 			);
 			path = tumblr;
+			sourceTree = "<group>";
+		};
+		D00C4C8A21BAEB9B00794C5B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D00C4C9521BAF67D00794C5B /* AppCoordinator.swift */,
+				D00C4C7821B98E9800794C5B /* AppDelegate.swift */,
+				D00C4C8421B98E9B00794C5B /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D00C4C8B21BAEBD300794C5B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D00C4C8121B98E9B00794C5B /* LaunchScreen.storyboard */,
+				D00C4C7F21B98E9B00794C5B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D00C4C8C21BAEC6F00794C5B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D00C4CA221BAFE8200794C5B /* Constants */,
+				D00C4C9A21BAFD7400794C5B /* Factories */,
+				D00C4C8D21BAEC7400794C5B /* Base Classes */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D00C4C8D21BAEC7400794C5B /* Base Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D00C4C8E21BAEC8500794C5B /* Coordinator.swift */,
+				D00C4CA521BAFFF500794C5B /* NavigationController.swift */,
+			);
+			path = "Base Classes";
+			sourceTree = "<group>";
+		};
+		D00C4C9021BAF53900794C5B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D00C4C9221BAF54200794C5B /* Services */,
+				D00C4C9121BAF53E00794C5B /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D00C4C9121BAF53E00794C5B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D00C4C9221BAF54200794C5B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D00C4C9321BAF54D00794C5B /* Services.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D00C4C9A21BAFD7400794C5B /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				D00C4C9B21BAFD8500794C5B /* NavigationControllerFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		D00C4C9D21BAFDBC00794C5B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D00C4C9F21BAFDD400794C5B /* Base Navigation Bar */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D00C4C9F21BAFDD400794C5B /* Base Navigation Bar */ = {
+			isa = PBXGroup;
+			children = (
+				D00C4CA021BAFE0100794C5B /* BaseNavigationBar.swift */,
+			);
+			path = "Base Navigation Bar";
+			sourceTree = "<group>";
+		};
+		D00C4CA221BAFE8200794C5B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D00C4CA321BAFECA00794C5B /* Color.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		D00C4CA721BB0F9500794C5B /* User Stories */ = {
+			isa = PBXGroup;
+			children = (
+				D00C4CA821BB0F9B00794C5B /* Feed */,
+			);
+			path = "User Stories";
+			sourceTree = "<group>";
+		};
+		D00C4CA821BB0F9B00794C5B /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				D00C4CA921BB0FC200794C5B /* FeedCoordinator.swift */,
+				D00C4CAB21BB0FC700794C5B /* Feed */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		D00C4CAB21BB0FC700794C5B /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D00C4C8721B98E9B00794C5B /* Build configuration list for PBXNativeTarget "tumblr" */;
 			buildPhases = (
+				691E51EA3896C8FE72070387 /* [CP] Check Pods Manifest.lock */,
 				D00C4C7121B98E9800794C5B /* Sources */,
 				D00C4C7221B98E9800794C5B /* Frameworks */,
 				D00C4C7321B98E9800794C5B /* Resources */,
+				2E017810E5C40E1B5347C862 /* [CP] Embed Pods Frameworks */,
+				D00C4C9721BAF98100794C5B /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -122,35 +282,105 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D00C4C9921BAFA4000794C5B /* .swiftlint.yml in Resources */,
 				D00C4C8321B98E9B00794C5B /* LaunchScreen.storyboard in Resources */,
 				D00C4C8021B98E9B00794C5B /* Assets.xcassets in Resources */,
-				D00C4C7E21B98E9800794C5B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E017810E5C40E1B5347C862 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-tumblr/Pods-tumblr-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SimpleImageViewer/SimpleImageViewer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleImageViewer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tumblr/Pods-tumblr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		691E51EA3896C8FE72070387 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tumblr-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D00C4C9721BAF98100794C5B /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D00C4C7121B98E9800794C5B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D00C4C7B21B98E9800794C5B /* ViewController.swift in Sources */,
+				D00C4C9621BAF67D00794C5B /* AppCoordinator.swift in Sources */,
+				D00C4CA621BAFFF500794C5B /* NavigationController.swift in Sources */,
+				D00C4C9C21BAFD8500794C5B /* NavigationControllerFactory.swift in Sources */,
+				D00C4CA421BAFECA00794C5B /* Color.swift in Sources */,
+				D00C4C9421BAF54D00794C5B /* Services.swift in Sources */,
 				D00C4C7921B98E9800794C5B /* AppDelegate.swift in Sources */,
+				D00C4CA121BAFE0100794C5B /* BaseNavigationBar.swift in Sources */,
+				D00C4CAA21BB0FC200794C5B /* FeedCoordinator.swift in Sources */,
+				D00C4C8F21BAEC8500794C5B /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D00C4C7C21B98E9800794C5B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D00C4C7D21B98E9800794C5B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D00C4C8121B98E9B00794C5B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -280,11 +510,12 @@
 		};
 		D00C4C8821B98E9B00794C5B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 907E4731BC0F5B0D7A4C6E6E /* Pods-tumblr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = tumblr/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/tumblr/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,11 +530,12 @@
 		};
 		D00C4C8921B98E9B00794C5B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AC6BFD96DAAE162D65A7A25 /* Pods-tumblr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = tumblr/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/tumblr/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
