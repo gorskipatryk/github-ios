@@ -14,6 +14,6 @@ final class AppCoordinator: Coordinator {
     }
     
     override func start() {
-        runFeedUserStory()
+        runRepositoriesUserStory()
     }
 }

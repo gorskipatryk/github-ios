@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class FeedCooridnator: Coordinator {
+final class RepositoriesCoordinator: Coordinator {
     
     init(services: Services, parentNavigationController: UINavigationController) {
         let childNavigationController = NavigationControllerFactory.makeNavigationController()

@@ -47,8 +47,8 @@ class Coordinator {
 
 extension Coordinator {
     
-    func runFeedUserStory() {
-        let coordinator = FeedCooridnator(services: services, parentNavigationController: childNavigationController)
+    func runRepositoriesUserStory() {
+        let coordinator = RepositoriesCoordinator(services: services, parentNavigationController: childNavigationController)
         coordinator.onCloseUserStoryHandler = { [unowned self, unowned coordinator] in
             self.removeDependency(coordinator)
         }

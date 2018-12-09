@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class FeedView: UIView {
+final class RepositoriesView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -20,7 +20,7 @@ final class FeedView: UIView {
     }
 }
 
-extension FeedView {
+extension RepositoriesView {
     
     private func setupUI() {
         backgroundColor = UIColor.blue

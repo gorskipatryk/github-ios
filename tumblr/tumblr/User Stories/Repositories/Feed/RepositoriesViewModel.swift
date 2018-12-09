@@ -8,7 +8,7 @@
 
 import RxSwift
 
-final class FeedViewModel {
+final class RepositoriesViewModel {
     
     init() {
         

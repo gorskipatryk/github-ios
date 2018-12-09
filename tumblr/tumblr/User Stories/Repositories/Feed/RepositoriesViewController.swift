@@ -8,16 +8,16 @@
 
 import UIKit
 
-final class FeedViewController: UIViewController {
+final class RepositoriesViewController: UIViewController {
     
-    private let viewModel: FeedViewModel
+    private let viewModel: RepositoriesViewModel
     
-    private let contentView: FeedView = {
+    private let contentView: RepositoriesView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
-    }(FeedView())
+    }(RepositoriesView())
     
-    init(viewModel: FeedViewModel) {
+    init(viewModel: RepositoriesViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -33,7 +33,7 @@ final class FeedViewController: UIViewController {
     }
 }
 
-extension FeedViewController {
+extension RepositoriesViewController {
     
     private func setupUI() {
         view.addSubview(contentView)
