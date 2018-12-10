@@ -8,7 +8,7 @@ target 'tumblr' do
   
   # Networking
   pod 'Moya/RxSwift'
-  pod 'Kingfisher'
+  pod 'Kingfisher', '~> 5.0'
   
   # Lint
   pod 'SwiftLint'
