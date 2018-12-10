@@ -43,6 +43,7 @@ final class RepositoryTableViewCell: UITableViewCell {
 extension RepositoryTableViewCell {
     
     private func setupUI() {
+        selectionStyle = .none
         addSubview(nameLabel)
         addSubview(fullNameLabel)
     }

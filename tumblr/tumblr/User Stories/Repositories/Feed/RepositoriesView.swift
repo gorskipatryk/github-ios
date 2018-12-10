@@ -20,10 +20,16 @@ final class RepositoriesView: UIView {
         return $0
     }(UISearchBar())
     
+    private let separatorView: UIView = {
+        $0.backgroundColor = Color.gray.withAlphaComponent(0.2)
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        return $0
+    }(UIView())
+    
     let tableView: UITableView = {
         $0.backgroundColor = Color.white
         $0.register(RepositoryTableViewCell.self, forCellReuseIdentifier: String(describing: RepositoryTableViewCell.self))
-        $0.separatorStyle = .singleLine
+        $0.separatorStyle = .none
         $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UITableView())
@@ -44,6 +50,7 @@ extension RepositoriesView {
     private func setupUI() {
         backgroundColor = Color.white
         addSubview(searchBar)
+        addSubview(separatorView)
         addSubview(tableView)
     }
     
@@ -53,6 +60,9 @@ extension RepositoriesView {
                 searchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
                 searchBar.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
                 searchBar.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+                
+                separatorView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+                separatorView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
                 
                 tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
                 tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
@@ -64,15 +74,21 @@ extension RepositoriesView {
                 searchBar.leadingAnchor.constraint(equalTo: leadingAnchor),
                 searchBar.trailingAnchor.constraint(equalTo: trailingAnchor),
                 
+                separatorView.leadingAnchor.constraint(equalTo: leadingAnchor),
+                separatorView.trailingAnchor.constraint(equalTo: trailingAnchor),
+                
                 tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
                 tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
                 tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
             ])
         }
         NSLayoutConstraint.activate([
-            searchBar.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.08),
+            searchBar.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.07),
             
-            tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor)
+            separatorView.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
+            separatorView.heightAnchor.constraint(equalToConstant: 1),
+            
+            tableView.topAnchor.constraint(equalTo: separatorView.bottomAnchor)
         ])
     }
 }
