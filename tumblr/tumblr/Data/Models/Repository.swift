@@ -41,8 +41,8 @@ final class Repository: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decode(Int.self, forKey: .id)
-        name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
-        fullName = try container.decodeIfPresent(String.self, forKey: .fullName) ?? ""
+        name = try container.decode(String.self, forKey: .name)
+        fullName = try container.decode(String.self, forKey: .fullName)
         privacy = try container.decode(Bool.self, forKey: .privacy)
         owner = try container.decode(User.self, forKey: .owner)
         description = try container.decodeIfPresent(String.self, forKey: .description) ?? ""
@@ -59,7 +59,7 @@ final class Repository: Decodable {
         if let date = formatter.date(from: updatedAtString) {
             updatedAt = date
         } else {
-            throw DecodingError.dataCorruptedError(forKey: .createdAt, in: container, debugDescription: "createdAt has wrong format")
+            throw DecodingError.dataCorruptedError(forKey: .createdAt, in: container, debugDescription: "updatedAt has wrong format")
         }
         stars = try container.decode(Int.self, forKey: .stars)
         language = try container.decode(String.self, forKey: .language)
