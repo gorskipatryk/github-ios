@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class RepositoriesCoordinator: Coordinator {
+final class RepositoriesCoordinator: Coordinator, BrowserPresenter, RepositoriesRouter {
     
     init(services: Services, parentNavigationController: UINavigationController) {
         let childNavigationController = NavigationControllerFactory.makeNavigationController()
@@ -20,8 +20,12 @@ final class RepositoriesCoordinator: Coordinator {
     }
     
     func showFeedScreen() {
-        let viewController = ViewControllerFactory.makeFeedViewController(services: services)
+        let viewController = ViewControllerFactory.makeFeedViewController(services: services, router: self)
         childNavigationController.setViewControllers([viewController], animated: false)
         parentNavigationController.present(childNavigationController, animated: true, completion: nil)
+    }
+    
+    func showPageInBrowser(url: URL) {
+        showInBrowser(url: url, from: childNavigationController)
     }
 }

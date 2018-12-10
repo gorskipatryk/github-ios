@@ -5,9 +5,8 @@
 //  Created by Patryk Górski on 09/12/2018.
 //  Copyright © 2018 Patryk Górski. All rights reserved.
 //
-
-import UIKit
 import RxSwift
+import UIKit
 
 final class RepositoriesViewController: UIViewController {
     
@@ -42,6 +41,13 @@ final class RepositoriesViewController: UIViewController {
         viewModel.repositoriesBehaviorRelay.subscribe(onNext: { _ in
             self.contentView.tableView.reloadData()
         })
+        .disposed(by: disposeBag)
+        contentView.searchBar.rx.text.asDriver()
+            .throttle(2)
+            .distinctUntilChanged()
+            .drive(onNext: { (text) in
+                self.viewModel.searchTextUpdated(text)
+            })
         .disposed(by: disposeBag)
     }
 }
