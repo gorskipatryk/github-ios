@@ -58,6 +58,8 @@ final class RepositoryTableViewCell: UITableViewCell {
         return $0
     }(UIButton(type: .system))
     
+    var onUsernameButtonTapHandler: (() -> Void)?
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         setupUI()
@@ -79,6 +81,12 @@ final class RepositoryTableViewCell: UITableViewCell {
         let dateString = formatter.string(from: repository.updatedAt)
         lastUpdateLabel.text = "Last update: \(dateString)"
         usernameButton.setTitle(repository.owner.login, for: .normal)
+        usernameButton.addTarget(self, action: #selector(onUsernameButtonTap), for: .touchUpInside)
+    }
+    
+    @objc
+    private func onUsernameButtonTap() {
+        onUsernameButtonTapHandler?()
     }
 }
 

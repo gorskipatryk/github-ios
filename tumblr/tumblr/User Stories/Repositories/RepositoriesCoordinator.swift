@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class RepositoriesCoordinator: Coordinator, BrowserPresenter, RepositoriesRouter {
+final class RepositoriesCoordinator: Coordinator, BrowserPresenter, RepositoriesRouter, UserDetailsRouter {
     
     init(services: Services, parentNavigationController: UINavigationController) {
         let childNavigationController = NavigationControllerFactory.makeNavigationController()
@@ -27,5 +27,10 @@ final class RepositoriesCoordinator: Coordinator, BrowserPresenter, Repositories
     
     func showPageInBrowser(url: URL) {
         showInBrowser(url: url, from: childNavigationController)
+    }
+    
+    func showUserDetails(user: User) {
+        let viewController = ViewControllerFactory.makeUserDetailsViewController(router: self, user: user)
+        childNavigationController.pushViewController(viewController, animated: true)
     }
 }

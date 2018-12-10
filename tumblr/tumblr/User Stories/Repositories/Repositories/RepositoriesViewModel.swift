@@ -11,6 +11,7 @@ import RxSwift
 
 protocol RepositoriesRouter {
     func showPageInBrowser(url: URL)
+    func showUserDetails(user: User)
 }
 
 protocol RepositoriesViewModelInputs {
@@ -79,5 +80,9 @@ final class RepositoriesViewModel: RepositoriesViewModelInputs, RepositoriesView
     func showPageInBrowser(url: String) {
         guard let url = URL(string: url) else { return }
         router.showPageInBrowser(url: url)
+    }
+    
+    func showUserDetails(user: User) {
+        router.showUserDetails(user: user)
     }
 }

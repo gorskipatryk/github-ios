@@ -25,6 +25,9 @@ extension RepositoriesViewController: UITableViewDataSource {
             fatalError("Dequed cell is of unexpected class.")
         }
         cell.setup(repository: repository)
+        cell.onUsernameButtonTapHandler = { [unowned self] in
+            self.viewModel.showUserDetails(user: self.viewModel.repositoriesBehaviorRelay.value[indexPath.row].owner)
+        }
         return cell
     }
 }

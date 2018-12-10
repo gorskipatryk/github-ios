@@ -15,4 +15,10 @@ final class ViewControllerFactory {
         let viewController = RepositoriesViewController(viewModel: viewModel)
         return viewController
     }
+    
+    static func makeUserDetailsViewController(router: UserDetailsRouter, user: User) -> UserDetailsViewController {
+        let viewModel = UserDetailsViewModel(router: router, user: user)
+        let viewController = UserDetailsViewController(viewModel: viewModel)
+        return viewController
+    }
 }

@@ -63,6 +63,8 @@ extension RepositoriesViewController {
     
     private func setupUI() {
         view.addSubview(contentView)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationItem.backBarButtonItem?.tintColor = Color.black
         title = "GitHub"
     }
 }
