@@ -1,0 +1,18 @@
+use_frameworks!
+
+target 'tumblr' do
+  
+  # Reactive Extensions
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  
+  # Networking
+  pod 'Moya/RxSwift'
+  pod 'Kingfisher', '~> 5.0'
+  
+  # Lint
+  pod 'SwiftLint'
+  
+  # UI
+  pod 'SimpleImageViewer'
+end
