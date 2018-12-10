@@ -17,15 +17,18 @@ struct Response<T: Decodable>: Decodable {
     
     let items: [T]
     let totalCount: Int
+    let totalPages: Int
     
-    init(items: [T], totalCount: Int) {
+    init(items: [T], totalCount: Int, totalPages: Int) {
         self.items = items
         self.totalCount = totalCount
+        self.totalPages = totalPages
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         items = try container.decode([T].self, forKey: .items)
         totalCount = try container.decode(Int.self, forKey: .totalCount)
+        totalPages = totalCount / 10
     }
 }

@@ -10,9 +10,28 @@ import UIKit
 
 final class RepositoriesView: UIView {
     
+    let searchBar: UISearchBar = {
+        $0.placeholder = "Type to search repositories"
+        $0.backgroundImage = UIImage()
+        $0.barTintColor = Color.white
+        $0.isTranslucent = false
+        $0.tintColor = Color.white
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        return $0
+    }(UISearchBar())
+    
+    let tableView: UITableView = {
+        $0.backgroundColor = Color.white
+        $0.register(RepositoryTableViewCell.self, forCellReuseIdentifier: String(describing: RepositoryTableViewCell.self))
+        $0.separatorStyle = .singleLine
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        return $0
+    }(UITableView())
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
+        setupConstraints()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -23,6 +42,37 @@ final class RepositoriesView: UIView {
 extension RepositoriesView {
     
     private func setupUI() {
-        backgroundColor = UIColor.blue
+        backgroundColor = Color.white
+        addSubview(searchBar)
+        addSubview(tableView)
+    }
+    
+    private func setupConstraints() {
+        if #available(iOS 11.0, *) {
+            NSLayoutConstraint.activate([
+                searchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+                searchBar.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+                searchBar.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+                
+                tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+                tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+                tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                searchBar.topAnchor.constraint(equalTo: topAnchor),
+                searchBar.leadingAnchor.constraint(equalTo: leadingAnchor),
+                searchBar.trailingAnchor.constraint(equalTo: trailingAnchor),
+                
+                tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+                tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+                tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            ])
+        }
+        NSLayoutConstraint.activate([
+            searchBar.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.08),
+            
+            tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor)
+        ])
     }
 }

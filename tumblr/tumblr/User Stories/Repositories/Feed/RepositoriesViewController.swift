@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import RxSwift
 
 final class RepositoriesViewController: UIViewController {
     
-    private let viewModel: RepositoriesViewModel
+    let viewModel: RepositoriesViewModel
+    private let disposeBag: DisposeBag = DisposeBag()
     
-    private let contentView: RepositoriesView = {
+    private lazy var contentView: RepositoriesView = {
+        $0.tableView.dataSource = self
+        $0.tableView.delegate = self
+        $0.searchBar.delegate = self
         $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(RepositoriesView())
@@ -30,6 +35,21 @@ final class RepositoriesViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupContentViewConstraints(contentView)
+        setupBindings()
+    }
+    
+    private func setupBindings() {
+        viewModel.repositoriesBehaviorRelay.subscribe(onNext: { _ in
+            self.contentView.tableView.reloadData()
+        })
+        .disposed(by: disposeBag)
+    }
+}
+
+extension RepositoriesViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }
 
@@ -37,6 +57,6 @@ extension RepositoriesViewController {
     
     private func setupUI() {
         view.addSubview(contentView)
-        title = "test"
+        title = "GitHub"
     }
 }
