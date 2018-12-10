@@ -33,6 +33,9 @@
 		D00C4CC521BE8B1400794C5B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CC421BE8B1400794C5B /* User.swift */; };
 		D00C4CC721BE8F8D00794C5B /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CC621BE8F8D00794C5B /* DateFormat.swift */; };
 		D00C4CC921BE902700794C5B /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CC821BE902700794C5B /* DateFormatter+Extensions.swift */; };
+		D00C4CD021BEB88500794C5B /* RepositoriesViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CCF21BEB88500794C5B /* RepositoriesViewController+UITableViewDelegate.swift */; };
+		D00C4CD221BEB89300794C5B /* RepositoriesViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CD121BEB89300794C5B /* RepositoriesViewController+UITableViewDataSource.swift */; };
+		D00C4CD521BEC71F00794C5B /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CD421BEC71F00794C5B /* RepositoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +69,9 @@
 		D00C4CC421BE8B1400794C5B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D00C4CC621BE8F8D00794C5B /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
 		D00C4CC821BE902700794C5B /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		D00C4CCF21BEB88500794C5B /* RepositoriesViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoriesViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		D00C4CD121BEB89300794C5B /* RepositoriesViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoriesViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		D00C4CD421BEC71F00794C5B /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +257,7 @@
 		D00C4CAB21BB0FC700794C5B /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				D00C4CCE21BEB64400794C5B /* Table View */,
 				D00C4CAC21BD8A1000794C5B /* RepositoriesViewModel.swift */,
 				D00C4CAE21BD8A1900794C5B /* RepositoriesViewController.swift */,
 				D00C4CB021BD8A2000794C5B /* RepositoriesView.swift */,
@@ -290,6 +297,24 @@
 			children = (
 			);
 			path = Users;
+			sourceTree = "<group>";
+		};
+		D00C4CCE21BEB64400794C5B /* Table View */ = {
+			isa = PBXGroup;
+			children = (
+				D00C4CD321BEC70C00794C5B /* Cell */,
+				D00C4CCF21BEB88500794C5B /* RepositoriesViewController+UITableViewDelegate.swift */,
+				D00C4CD121BEB89300794C5B /* RepositoriesViewController+UITableViewDataSource.swift */,
+			);
+			path = "Table View";
+			sourceTree = "<group>";
+		};
+		D00C4CD321BEC70C00794C5B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D00C4CD421BEC71F00794C5B /* RepositoryTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,6 +469,7 @@
 				D00C4CA621BAFFF500794C5B /* NavigationController.swift in Sources */,
 				D00C4C9C21BAFD8500794C5B /* NavigationControllerFactory.swift in Sources */,
 				D00C4CB121BD8A2000794C5B /* RepositoriesView.swift in Sources */,
+				D00C4CD221BEB89300794C5B /* RepositoriesViewController+UITableViewDataSource.swift in Sources */,
 				D00C4CB921BDBE6400794C5B /* GitHubAPI.swift in Sources */,
 				D00C4CC521BE8B1400794C5B /* User.swift in Sources */,
 				D00C4CB321BD8B2200794C5B /* ViewControllerFactory.swift in Sources */,
@@ -458,6 +484,8 @@
 				D00C4CAA21BB0FC200794C5B /* RepositoriesCoordinator.swift in Sources */,
 				D00C4C8F21BAEC8500794C5B /* Coordinator.swift in Sources */,
 				D00C4CC921BE902700794C5B /* DateFormatter+Extensions.swift in Sources */,
+				D00C4CD021BEB88500794C5B /* RepositoriesViewController+UITableViewDelegate.swift in Sources */,
+				D00C4CD521BEC71F00794C5B /* RepositoryTableViewCell.swift in Sources */,
 				D00C4CC721BE8F8D00794C5B /* DateFormat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
