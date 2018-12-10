@@ -12,16 +12,20 @@ struct Response<T: Decodable>: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case items
+        case totalCount = "total_count"
     }
     
     let items: [T]
+    let totalCount: Int
     
-    init(items: [T]) {
+    init(items: [T], totalCount: Int) {
         self.items = items
+        self.totalCount = totalCount
     }
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         items = try container.decode([T].self, forKey: .items)
+        totalCount = try container.decode(Int.self, forKey: .totalCount)
     }
 }

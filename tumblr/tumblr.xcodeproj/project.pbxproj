@@ -27,6 +27,12 @@
 		D00C4CB621BD8D9100794C5B /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CB521BD8D9100794C5B /* UIViewController+Extensions.swift */; };
 		D00C4CB921BDBE6400794C5B /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CB821BDBE6400794C5B /* GitHubAPI.swift */; };
 		D00C4CBB21BDC22900794C5B /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CBA21BDC22900794C5B /* Response.swift */; };
+		D00C4CBF21BE8A3500794C5B /* RepositoriesNetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CBE21BE8A3500794C5B /* RepositoriesNetworkLayer.swift */; };
+		D00C4CC121BE8A3F00794C5B /* RepositoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CC021BE8A3F00794C5B /* RepositoriesService.swift */; };
+		D00C4CC321BE8B0E00794C5B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CC221BE8B0E00794C5B /* Repository.swift */; };
+		D00C4CC521BE8B1400794C5B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CC421BE8B1400794C5B /* User.swift */; };
+		D00C4CC721BE8F8D00794C5B /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CC621BE8F8D00794C5B /* DateFormat.swift */; };
+		D00C4CC921BE902700794C5B /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CC821BE902700794C5B /* DateFormatter+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +60,12 @@
 		D00C4CB521BD8D9100794C5B /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		D00C4CB821BDBE6400794C5B /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
 		D00C4CBA21BDC22900794C5B /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		D00C4CBE21BE8A3500794C5B /* RepositoriesNetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesNetworkLayer.swift; sourceTree = "<group>"; };
+		D00C4CC021BE8A3F00794C5B /* RepositoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesService.swift; sourceTree = "<group>"; };
+		D00C4CC221BE8B0E00794C5B /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		D00C4CC421BE8B1400794C5B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D00C4CC621BE8F8D00794C5B /* DateFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
+		D00C4CC821BE902700794C5B /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +180,8 @@
 		D00C4C9121BAF53E00794C5B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D00C4CC221BE8B0E00794C5B /* Repository.swift */,
+				D00C4CC421BE8B1400794C5B /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,6 +189,8 @@
 		D00C4C9221BAF54200794C5B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D00C4CBD21BE8A2700794C5B /* Users */,
+				D00C4CBC21BE8A1E00794C5B /* Repositories */,
 				D00C4CB721BDBE4B00794C5B /* Core Layer */,
 				D00C4C9321BAF54D00794C5B /* Services.swift */,
 			);
@@ -210,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				D00C4CA321BAFECA00794C5B /* Color.swift */,
+				D00C4CC621BE8F8D00794C5B /* DateFormat.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -245,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				D00C4CB521BD8D9100794C5B /* UIViewController+Extensions.swift */,
+				D00C4CC821BE902700794C5B /* DateFormatter+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -256,6 +274,22 @@
 				D00C4CBA21BDC22900794C5B /* Response.swift */,
 			);
 			path = "Core Layer";
+			sourceTree = "<group>";
+		};
+		D00C4CBC21BE8A1E00794C5B /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				D00C4CBE21BE8A3500794C5B /* RepositoriesNetworkLayer.swift */,
+				D00C4CC021BE8A3F00794C5B /* RepositoriesService.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		D00C4CBD21BE8A2700794C5B /* Users */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Users;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,15 +437,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D00C4CBF21BE8A3500794C5B /* RepositoriesNetworkLayer.swift in Sources */,
+				D00C4CC121BE8A3F00794C5B /* RepositoriesService.swift in Sources */,
 				D00C4CAD21BD8A1000794C5B /* RepositoriesViewModel.swift in Sources */,
 				D00C4C9621BAF67D00794C5B /* AppCoordinator.swift in Sources */,
 				D00C4CA621BAFFF500794C5B /* NavigationController.swift in Sources */,
 				D00C4C9C21BAFD8500794C5B /* NavigationControllerFactory.swift in Sources */,
 				D00C4CB121BD8A2000794C5B /* RepositoriesView.swift in Sources */,
 				D00C4CB921BDBE6400794C5B /* GitHubAPI.swift in Sources */,
+				D00C4CC521BE8B1400794C5B /* User.swift in Sources */,
 				D00C4CB321BD8B2200794C5B /* ViewControllerFactory.swift in Sources */,
 				D00C4CA421BAFECA00794C5B /* Color.swift in Sources */,
 				D00C4C9421BAF54D00794C5B /* Services.swift in Sources */,
+				D00C4CC321BE8B0E00794C5B /* Repository.swift in Sources */,
 				D00C4C7921B98E9800794C5B /* AppDelegate.swift in Sources */,
 				D00C4CAF21BD8A1900794C5B /* RepositoriesViewController.swift in Sources */,
 				D00C4CB621BD8D9100794C5B /* UIViewController+Extensions.swift in Sources */,
@@ -419,6 +457,8 @@
 				D00C4CA121BAFE0100794C5B /* BaseNavigationBar.swift in Sources */,
 				D00C4CAA21BB0FC200794C5B /* RepositoriesCoordinator.swift in Sources */,
 				D00C4C8F21BAEC8500794C5B /* Coordinator.swift in Sources */,
+				D00C4CC921BE902700794C5B /* DateFormatter+Extensions.swift in Sources */,
+				D00C4CC721BE8F8D00794C5B /* DateFormat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
