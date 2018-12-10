@@ -26,7 +26,7 @@
 		D00C4CB321BD8B2200794C5B /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CB221BD8B2200794C5B /* ViewControllerFactory.swift */; };
 		D00C4CB621BD8D9100794C5B /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CB521BD8D9100794C5B /* UIViewController+Extensions.swift */; };
 		D00C4CB921BDBE6400794C5B /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CB821BDBE6400794C5B /* GitHubAPI.swift */; };
-		D00C4CBB21BDC22900794C5B /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CBA21BDC22900794C5B /* Meta.swift */; };
+		D00C4CBB21BDC22900794C5B /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CBA21BDC22900794C5B /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +53,7 @@
 		D00C4CB221BD8B2200794C5B /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		D00C4CB521BD8D9100794C5B /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		D00C4CB821BDBE6400794C5B /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
-		D00C4CBA21BDC22900794C5B /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		D00C4CBA21BDC22900794C5B /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,7 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				D00C4CB821BDBE6400794C5B /* GitHubAPI.swift */,
-				D00C4CBA21BDC22900794C5B /* Meta.swift */,
+				D00C4CBA21BDC22900794C5B /* Response.swift */,
 			);
 			path = "Core Layer";
 			sourceTree = "<group>";
@@ -415,7 +415,7 @@
 				D00C4C7921B98E9800794C5B /* AppDelegate.swift in Sources */,
 				D00C4CAF21BD8A1900794C5B /* RepositoriesViewController.swift in Sources */,
 				D00C4CB621BD8D9100794C5B /* UIViewController+Extensions.swift in Sources */,
-				D00C4CBB21BDC22900794C5B /* Meta.swift in Sources */,
+				D00C4CBB21BDC22900794C5B /* Response.swift in Sources */,
 				D00C4CA121BAFE0100794C5B /* BaseNavigationBar.swift in Sources */,
 				D00C4CAA21BB0FC200794C5B /* RepositoriesCoordinator.swift in Sources */,
 				D00C4C8F21BAEC8500794C5B /* Coordinator.swift in Sources */,

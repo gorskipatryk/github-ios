@@ -50,7 +50,7 @@ extension GitHubAPI: TargetType {
     var task: Task {
         switch self {
         case .fetchRepositories(let query, let page):
-            return .requestParameters(parameters: ["q" : query, "page" : page, "per_page" : kPerPageCount], encoding: URLEncoding.queryString)
+            return .requestParameters(parameters: ["q": query, "page": page, "per_page": kPerPageCount], encoding: URLEncoding.queryString)
         }
     }
     
