@@ -40,7 +40,7 @@ final class RepositoriesViewModel: RepositoriesViewModelInputs, RepositoriesView
         self.router = router
     }
     
-    func fetchRepositoriesFor(query: String, paginationState: PaginationState = .initial) {
+    private func fetchRepositoriesFor(query: String, paginationState: PaginationState = .initial) {
         repositoryService.fetchRepositories(for: query, page: page)
             .subscribe(onNext: { [unowned self] repos in
                 switch paginationState {
@@ -60,6 +60,13 @@ final class RepositoriesViewModel: RepositoriesViewModelInputs, RepositoriesView
             .disposed(by: disposeBag)
     }
     
+    func getMoreRepositories() {
+        page += 1
+        if page < totalPages {
+            fetchRepositoriesFor(query: savedQuery, paginationState: .load)
+        }
+    }
+    
     func searchTextUpdated(_ text: String?) {
         guard let text = text else { return }
         if text != "" {
@@ -72,12 +79,5 @@ final class RepositoriesViewModel: RepositoriesViewModelInputs, RepositoriesView
     func showPageInBrowser(url: String) {
         guard let url = URL(string: url) else { return }
         router.showPageInBrowser(url: url)
-    }
-    
-    func getMoreRepositories() {
-        page += 1
-        if page < totalPages {
-            fetchRepositoriesFor(query: savedQuery, paginationState: .load)
-        }
     }
 }
