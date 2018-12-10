@@ -7,5 +7,5 @@
 //
 
 enum DateFormat: String {
-    case githubDate = "yyyy-MM-dd HH:mm:ss"
+    case githubDate = "yyyy-MM-dd'T'HH:mm:ssZ"
 }
