@@ -11,6 +11,7 @@ import UIKit
 final class UserDetailsViewController: UIViewController {
     
     private lazy var contentView: UserDetailsView = {
+        $0.userProfileLinkButton.addTarget(self, action: #selector(linkButtonTap), for: .touchUpInside)
         $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UserDetailsView())
@@ -31,6 +32,11 @@ final class UserDetailsViewController: UIViewController {
         setupUI()
         setupContentViewConstraints(contentView)
         contentView.setup(user: viewModel.user)
+    }
+    
+    @objc
+    private func linkButtonTap() {
+        viewModel.showPageInBrowser()
     }
 }
 

@@ -30,7 +30,7 @@ final class UserDetailsView: UIView {
         return $0
     }(UILabel())
     
-    private let userProfileLinkButton: UIButton = {
+    let userProfileLinkButton: UIButton = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         return $0
     }(UIButton(type: .system))
