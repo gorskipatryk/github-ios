@@ -7,7 +7,7 @@ target 'tumblr' do
   pod 'RxCocoa'
   
   # Networking
-  pod 'Moya'
+  pod 'Moya/RxSwift'
   pod 'Kingfisher'
   
   # Lint

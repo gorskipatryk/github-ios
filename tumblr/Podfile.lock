@@ -1,11 +1,12 @@
 PODS:
   - Alamofire (4.7.3)
   - Kingfisher (4.10.1)
-  - Moya (12.0.1):
-    - Moya/Core (= 12.0.1)
   - Moya/Core (12.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.0)
+  - Moya/RxSwift (12.0.1):
+    - Moya/Core
+    - RxSwift (~> 4.0)
   - Result (4.0.0)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
@@ -17,7 +18,7 @@ PODS:
 
 DEPENDENCIES:
   - Kingfisher
-  - Moya
+  - Moya/RxSwift
   - RxCocoa
   - RxSwift
   - SimpleImageViewer
@@ -46,6 +47,6 @@ SPEC CHECKSUMS:
   SimpleImageViewer: 34c3a2cde2d9ac022146772cefc27fca14b0c8b1
   SwiftLint: f1629ae733b64e9cad20052de01d1debd5b640e7
 
-PODFILE CHECKSUM: 53c5361734cd8ec62208958819c841a524afe507
+PODFILE CHECKSUM: b20c5345bf8c584432096aeafe07912bdbac94d6
 
 COCOAPODS: 1.5.3

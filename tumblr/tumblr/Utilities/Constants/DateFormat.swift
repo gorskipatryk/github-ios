@@ -6,4 +6,6 @@
 //  Copyright © 2018 Patryk Górski. All rights reserved.
 //
 
-import Foundation
+enum DateFormat: String {
+    case githubDate = "yyyy-MM-dd HH:mm:ss"
+}
