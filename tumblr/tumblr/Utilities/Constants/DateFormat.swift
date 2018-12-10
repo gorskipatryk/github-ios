@@ -8,4 +8,5 @@
 
 enum DateFormat: String {
     case githubDate = "yyyy-MM-dd'T'HH:mm:ssZ"
+    case viewDate = "dd-MM-yyyy"
 }

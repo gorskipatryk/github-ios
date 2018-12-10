@@ -13,4 +13,5 @@ enum Color {
     static let black = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     static let white = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     static let gray = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+    static let red = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
 }
