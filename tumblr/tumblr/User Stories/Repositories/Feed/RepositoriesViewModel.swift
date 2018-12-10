@@ -9,16 +9,21 @@
 import RxCocoa
 import RxSwift
 
+protocol RepositoriesRouter {
+    func showPageInBrowser(url: URL)
+}
+
 protocol RepositoriesViewModelInputs {
-    
+    func searchTextUpdated(_ text: String?)
 }
 
 protocol RepositoriesViewModelOutputs {
-    
+    var repositoriesBehaviorRelay: BehaviorRelay<[Repository]> { get }
 }
 
-final class RepositoriesViewModel {
+final class RepositoriesViewModel: RepositoriesViewModelInputs, RepositoriesViewModelOutputs {
     
+    private let router: RepositoriesRouter
     private let repositoryService: RepositoriesService
     private let disposeBag: DisposeBag = DisposeBag()
     
@@ -26,18 +31,32 @@ final class RepositoriesViewModel {
     
     lazy var repositoriesBehaviorRelay: BehaviorRelay<[Repository]> = BehaviorRelay<[Repository]>(value: [])
     
-    init(services: Services) {
+    init(services: Services, router: RepositoriesRouter) {
         self.repositoryService = services.repositoriesService
-        fetchRepo()
+        self.router = router
     }
     
-    func fetchRepo() {
-        repositoryService.fetchRepositories(for: "rxswift", page: page)
+    func fetchRepositoriesFor(query: String) {
+        repositoryService.fetchRepositories(for: query, page: page)
             .subscribe(onNext: { [unowned self] repos in
                 self.repositoriesBehaviorRelay.accept(repos.items)
-            }, onError: { (error) in
+                }, onError: { (error) in
                 print(error.localizedDescription)
             })
             .disposed(by: disposeBag)
+    }
+    
+    func searchTextUpdated(_ text: String?) {
+        guard let text = text else { return }
+        if text != "" {
+            fetchRepositoriesFor(query: text)
+        } else {
+            repositoriesBehaviorRelay.accept([])
+        }
+    }
+    
+    func showPageInBrowser(url: String) {
+        guard let url = URL(string: url) else { return }
+        router.showPageInBrowser(url: url)
     }
 }

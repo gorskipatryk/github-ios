@@ -15,6 +15,7 @@ extension RepositoriesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.repositoriesBehaviorRelay.value.isEmpty ? tableView.setEmptyMessage("No results") : tableView.restore()
         return viewModel.repositoriesBehaviorRelay.value.count
     }
     

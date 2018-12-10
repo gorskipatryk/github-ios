@@ -11,7 +11,7 @@ import UIKit
 extension RepositoriesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        viewModel.showPageInBrowser(url: viewModel.repositoriesBehaviorRelay.value[indexPath.row].url)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
