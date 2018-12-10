@@ -10,8 +10,8 @@ import UIKit
 
 final class ViewControllerFactory {
     
-    static func makeFeedViewController() -> RepositoriesViewController {
-        let viewModel = RepositoriesViewModel()
+    static func makeFeedViewController(services: Services) -> RepositoriesViewController {
+        let viewModel = RepositoriesViewModel(services: services)
         let viewController = RepositoriesViewController(viewModel: viewModel)
         return viewController
     }

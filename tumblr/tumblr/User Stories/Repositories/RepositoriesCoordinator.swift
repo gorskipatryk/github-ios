@@ -20,7 +20,7 @@ final class RepositoriesCoordinator: Coordinator {
     }
     
     func showFeedScreen() {
-        let viewController = ViewControllerFactory.makeFeedViewController()
+        let viewController = ViewControllerFactory.makeFeedViewController(services: services)
         childNavigationController.setViewControllers([viewController], animated: false)
         parentNavigationController.present(childNavigationController, animated: true, completion: nil)
     }
