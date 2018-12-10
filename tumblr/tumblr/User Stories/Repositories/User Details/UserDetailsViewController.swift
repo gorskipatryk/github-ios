@@ -30,6 +30,7 @@ final class UserDetailsViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupContentViewConstraints(contentView)
+        contentView.setup(user: viewModel.user)
     }
 }
 
