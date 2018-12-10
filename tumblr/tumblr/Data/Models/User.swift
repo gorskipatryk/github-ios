@@ -28,7 +28,7 @@ final class User: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decode(Int.self, forKey: .id)
         login = try container.decode(String.self, forKey: .login)
-        avatarStringURL = try container.decode(String.self, forKey: .avatarStringURL)
+        avatarStringURL = try container.decodeIfPresent(String.self, forKey: .avatarStringURL) ?? ""
         type = try container.decode(String.self, forKey: .type)
         url = try container.decode(String.self, forKey: .url)
     }

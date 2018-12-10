@@ -41,13 +41,13 @@ final class Repository: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decode(Int.self, forKey: .id)
-        name = try container.decode(String.self, forKey: .name)
-        fullName = try container.decode(String.self, forKey: .fullName)
-        privacy = try container.decode(Bool.self, forKey: .privacy)
+        name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
+        fullName = try container.decodeIfPresent(String.self, forKey: .fullName) ?? ""
+        privacy = try container.decodeIfPresent(Bool.self, forKey: .privacy) ?? false
         owner = try container.decode(User.self, forKey: .owner)
         description = try container.decodeIfPresent(String.self, forKey: .description) ?? ""
-        url = try container.decode(String.self, forKey: .url)
-        isFork = try container.decode(Bool.self, forKey: .isFork)
+        url = try container.decodeIfPresent(String.self, forKey: .url) ?? ""
+        isFork = try container.decodeIfPresent(Bool.self, forKey: .isFork) ?? false
         let createdAtString = try container.decode(String.self, forKey: .createdAt)
         let formatter = DateFormatter().formatDate(dateFormat: .githubDate)
         if let date = formatter.date(from: createdAtString) {
@@ -61,7 +61,7 @@ final class Repository: Decodable {
         } else {
             throw DecodingError.dataCorruptedError(forKey: .createdAt, in: container, debugDescription: "updatedAt has wrong format")
         }
-        stars = try container.decode(Int.self, forKey: .stars)
-        language = try container.decode(String.self, forKey: .language)
+        stars = try container.decodeIfPresent(Int.self, forKey: .stars) ?? 0
+        language = try container.decodeIfPresent(String.self, forKey: .language) ?? ""
     }
 }
