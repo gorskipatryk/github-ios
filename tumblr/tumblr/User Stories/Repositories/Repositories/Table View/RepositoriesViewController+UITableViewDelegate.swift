@@ -17,4 +17,9 @@ extension RepositoriesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard indexPath.row == viewModel.repositoriesBehaviorRelay.value.count - 2 else { return }
+        viewModel.getMoreRepositories()
+    }
 }

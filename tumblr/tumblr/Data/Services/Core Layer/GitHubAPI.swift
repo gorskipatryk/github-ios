@@ -8,7 +8,7 @@
 
 import Moya
 
-private let kPerPageCount: Int = 10
+private let kPerPageCount: Int = 20
 
 enum GitHubAPI {
     case fetchRepositories(query: String, page: Int)

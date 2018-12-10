@@ -29,6 +29,6 @@ struct Response<T: Decodable>: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         items = try container.decode([T].self, forKey: .items)
         totalCount = try container.decode(Int.self, forKey: .totalCount)
-        totalPages = totalCount / 10
+        totalPages = totalCount / 20
     }
 }
