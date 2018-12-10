@@ -39,6 +39,7 @@
 		D00C4CD721BEE5AB00794C5B /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CD621BEE5AB00794C5B /* UITableView+Extensions.swift */; };
 		D00C4CDA21BEE91600794C5B /* BrowserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CD921BEE91600794C5B /* BrowserPresenter.swift */; };
 		D00C4CDC21BEF2B500794C5B /* PaginationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CDB21BEF2B500794C5B /* PaginationState.swift */; };
+		D00C4CDE21BF076900794C5B /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00C4CDD21BF076900794C5B /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		D00C4CD621BEE5AB00794C5B /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		D00C4CD921BEE91600794C5B /* BrowserPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserPresenter.swift; sourceTree = "<group>"; };
 		D00C4CDB21BEF2B500794C5B /* PaginationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationState.swift; sourceTree = "<group>"; };
+		D00C4CDD21BF076900794C5B /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +280,7 @@
 				D00C4CC821BE902700794C5B /* DateFormatter+Extensions.swift */,
 				D00C4CD621BEE5AB00794C5B /* UITableView+Extensions.swift */,
 				D00C4CB521BD8D9100794C5B /* UIViewController+Extensions.swift */,
+				D00C4CDD21BF076900794C5B /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D00C4CDE21BF076900794C5B /* UIImageView+Extensions.swift in Sources */,
 				D00C4CBF21BE8A3500794C5B /* RepositoriesNetworkLayer.swift in Sources */,
 				D00C4CC121BE8A3F00794C5B /* RepositoriesService.swift in Sources */,
 				D00C4CAD21BD8A1000794C5B /* RepositoriesViewModel.swift in Sources */,

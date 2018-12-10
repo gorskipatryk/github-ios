@@ -6,4 +6,13 @@
 //  Copyright © 2018 Patryk Górski. All rights reserved.
 //
 
-import Foundation
+import Kingfisher
+import UIKit
+
+extension UIImageView {
+    
+    func setImage(stringURL: String?) {
+        guard let stringURL = stringURL, let url = URL(string: stringURL) else { return }
+        kf.setImage(with: url)
+    }
+}
