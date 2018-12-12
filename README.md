@@ -1,1 +1,1 @@
-tumblr-ios
+This app has meant to be an tumblr client, but due to GDPR resposne from tubmlr API I've made a decision to make a GitHub client for iOS. I've tried to refactor everything, but maybe somewhere you can see some "tumblr" names. 
